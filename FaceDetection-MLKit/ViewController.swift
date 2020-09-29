@@ -8,10 +8,10 @@
 
 import UIKit
 import CoreMedia
-import Firebase
+import MLKit
 
 class ViewController: UIViewController {
-
+    
     // MARK: - UI Properties
     @IBOutlet weak var videoPreview: UIView!
     @IBOutlet weak var drawingView: DrawingView!
@@ -22,22 +22,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var etimeLabel: UILabel!
     @IBOutlet weak var fpsLabel: UILabel!
     
+    
     // MARK - Inference Result Data
     //private var tableData: [BodyPoint?] = []
     
     // MARK - Performance Measurement Property
     private let 👨‍🔧 = 📏()
     
+    
     // MARK: - ML Kit Vision Property
-    lazy var vision = Vision.vision()
-    lazy var faceDetector: VisionFaceDetector = { () -> VisionFaceDetector in
-        // Real-time contour detection of multiple faces
-        let options = VisionFaceDetectorOptions()
-        options.contourMode = .all
-        options.classificationMode = .all
-        
-        return vision.faceDetector(options: options)
-    }()
+    var options = FaceDetectorOptions()
+    
     var isInference = false
     
     // MARK: - AV Property
@@ -46,6 +41,10 @@ class ViewController: UIViewController {
     // MARK: - View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        options.performanceMode = .accurate
+        options.landmarkMode = .all
+        options.classificationMode = .all
+        options.contourMode = .all
         
         // setup camera
         setUpCamera()
@@ -122,17 +121,22 @@ extension ViewController {
         // crop found word
         let ciContext = CIContext()
         guard let cgImage: CGImage = ciContext.createCGImage(ciimage, from: ciimage.extent) else {
-            self.isInference = false
-            // end of measure
-            self.👨‍🔧.🎬🤚()
+            //            self.isInference = false
+            //            // end of measure
+            //            self.👨‍🔧.🎬🤚()
             return
         }
         let uiImage: UIImage = UIImage(cgImage: cgImage)
         let visionImage = VisionImage(image: uiImage)
-        faceDetector.process(visionImage) { (features, error) in
-            self.👨‍🔧.🏷(with: "endInference")
+        //        visionImage.orientation = uiImage.imageOrientation
+        
+        let faceDetector = FaceDetector.faceDetector(options: options)
+        
+        faceDetector.process(visionImage) { (faces, error) in
+            //            self.👨‍🔧.🏷(with: "endInference")
             // this closure is called on main thread
-            if error == nil, let faces: [VisionFace] = features {
+            
+            if error == nil, let faces: [Face] = faces, !faces.isEmpty {
                 self.drawingView.imageSize = uiImage.size
                 self.drawingView.faces = faces
                 if (faces.first?.smilingProbability ?? 0) > 0.6 {
@@ -146,7 +150,7 @@ extension ViewController {
                 self.drawingView.faces = []
             }
             
-             self.isInference = false
+            self.isInference = false
             // end of measure
             self.👨‍🔧.🎬🤚()
         }

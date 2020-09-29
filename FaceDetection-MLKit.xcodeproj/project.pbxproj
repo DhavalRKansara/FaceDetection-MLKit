@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AEE460525238056005BD5E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AEE460425238056005BD5E5 /* GoogleService-Info.plist */; };
 		43F242B92667EDA314BAB307 /* Pods_FaceDetection_MLKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1310FD4494954EF9F7D11CD3 /* Pods_FaceDetection_MLKitTests.framework */; };
 		71B182D7224A5527007078C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B182D6224A5527007078C7 /* AppDelegate.swift */; };
 		71B182D9224A5527007078C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B182D8224A5527007078C7 /* ViewController.swift */; };
@@ -14,7 +15,6 @@
 		71B182DE224A5529007078C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B182DD224A5529007078C7 /* Assets.xcassets */; };
 		71B182E1224A5529007078C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B182DF224A5529007078C7 /* LaunchScreen.storyboard */; };
 		71B182EC224A5529007078C7 /* FaceDetection_MLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B182EB224A5529007078C7 /* FaceDetection_MLKitTests.swift */; };
-		71B182F7224A554B007078C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71B182F6224A554B007078C7 /* GoogleService-Info.plist */; };
 		71B182F9224A56F7007078C7 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B182F8224A56F7007078C7 /* VideoCapture.swift */; };
 		71B182FB224A5702007078C7 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B182FA224A5702007078C7 /* Measure.swift */; };
 		71B182FD224A59E6007078C7 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B182FC224A59E6007078C7 /* DrawingView.swift */; };
@@ -34,6 +34,7 @@
 /* Begin PBXFileReference section */
 		1310FD4494954EF9F7D11CD3 /* Pods_FaceDetection_MLKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceDetection_MLKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		300228CD0A11BAB2391E5389 /* Pods-FaceDetection-MLKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDetection-MLKit.debug.xcconfig"; path = "Target Support Files/Pods-FaceDetection-MLKit/Pods-FaceDetection-MLKit.debug.xcconfig"; sourceTree = "<group>"; };
+		3AEE460425238056005BD5E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DE825FF75FEBC43B0174C97 /* Pods_FaceDetection_MLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceDetection_MLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7811808EBD55F314A60F32 /* Pods-FaceDetection-MLKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDetection-MLKitTests.debug.xcconfig"; path = "Target Support Files/Pods-FaceDetection-MLKitTests/Pods-FaceDetection-MLKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		71B182D3224A5527007078C7 /* FaceDetection-MLKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaceDetection-MLKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +47,6 @@
 		71B182E7224A5529007078C7 /* FaceDetection-MLKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FaceDetection-MLKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B182EB224A5529007078C7 /* FaceDetection_MLKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetection_MLKitTests.swift; sourceTree = "<group>"; };
 		71B182ED224A5529007078C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		71B182F6224A554B007078C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71B182F8224A56F7007078C7 /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		71B182FA224A5702007078C7 /* Measure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		71B182FC224A59E6007078C7 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
@@ -106,6 +106,7 @@
 		71B182D5224A5527007078C7 /* FaceDetection-MLKit */ = {
 			isa = PBXGroup;
 			children = (
+				3AEE460425238056005BD5E5 /* GoogleService-Info.plist */,
 				71B182D6224A5527007078C7 /* AppDelegate.swift */,
 				71B182D8224A5527007078C7 /* ViewController.swift */,
 				71B182FC224A59E6007078C7 /* DrawingView.swift */,
@@ -115,7 +116,6 @@
 				71B182DD224A5529007078C7 /* Assets.xcassets */,
 				71B182DF224A5529007078C7 /* LaunchScreen.storyboard */,
 				71B182E2224A5529007078C7 /* Info.plist */,
-				71B182F6224A554B007078C7 /* GoogleService-Info.plist */,
 			);
 			path = "FaceDetection-MLKit";
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71B182E1224A5529007078C7 /* LaunchScreen.storyboard in Resources */,
-				71B182F7224A554B007078C7 /* GoogleService-Info.plist in Resources */,
+				3AEE460525238056005BD5E5 /* GoogleService-Info.plist in Resources */,
 				71B182DE224A5529007078C7 /* Assets.xcassets in Resources */,
 				71B182DC224A5527007078C7 /* Main.storyboard in Resources */,
 			);
@@ -270,16 +270,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceDetection-MLKit/Pods-FaceDetection-MLKit-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVFaceDetectorResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-FaceDetection-MLKit/Pods-FaceDetection-MLKit-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-FaceDetection-MLKit/Pods-FaceDetection-MLKit-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -314,26 +309,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceDetection-MLKit/Pods-FaceDetection-MLKit-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FaceDetection-MLKit/Pods-FaceDetection-MLKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FaceDetection-MLKit/Pods-FaceDetection-MLKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -515,13 +495,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WXJ4Z4H69;
+				DEVELOPMENT_TEAM = RQ9BPQCP49;
 				INFOPLIST_FILE = "FaceDetection-MLKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tucan9389.facedetection-mlkit.FaceDetection-MLKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.FaceDetection-MLKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -534,13 +514,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WXJ4Z4H69;
+				DEVELOPMENT_TEAM = RQ9BPQCP49;
 				INFOPLIST_FILE = "FaceDetection-MLKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tucan9389.facedetection-mlkit.FaceDetection-MLKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.FaceDetection-MLKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -554,7 +534,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WXJ4Z4H69;
+				DEVELOPMENT_TEAM = RQ9BPQCP49;
 				INFOPLIST_FILE = "FaceDetection-MLKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -576,7 +556,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WXJ4Z4H69;
+				DEVELOPMENT_TEAM = RQ9BPQCP49;
 				INFOPLIST_FILE = "FaceDetection-MLKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

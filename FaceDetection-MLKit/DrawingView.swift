@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import Firebase
+import MLKit
 
 class DrawingView: UIView {
 
     var imageSize: CGSize = .zero
-    var faces: [VisionFace] = [] {
+    var faces: [Face] = [] {
         didSet {
             setNeedsDisplay()
         }
